@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Alex",
+        "department": "FrontEnd",
+        "salary": 10000
+    },    
+    {
+        "id": 2,
+        "name": "Amanda",
+        "department": "FrontEnd",
+        "salary": 20000
+    },    
+    {
+        "id": 3,
+        "name": "Andrew",
+        "department": "BackEnd",
+        "salary": 30000
+    },    
+    {
+        "id": 4,
+        "name": "Anthony",
+        "department": "BackEnd",
+        "salary": 40000
+    },    
+    {
+        "id": 5,
+        "name": "Audrey",
+        "department": "PM",
+        "salary": 50000
+    },    
+    {
+        "id": 6,
+        "name": "Austin",
+        "department": "Operations",
+        "salary": 60000
+    }
+]

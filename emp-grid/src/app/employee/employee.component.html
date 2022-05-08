@@ -1,0 +1,19 @@
+<div class="container padding">
+    <form [formGroup]="employeeForm">
+        <div class="form-group">
+          <label for="name">Employee Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter name"  formControlName="name">
+        </div>
+        <div class="form-group">
+            <label for="name">Department</label>
+            <textarea class="form-control" id="department" cols="30" rows="2  " placeholder="Enter Department" formControlName="department"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="name">Salary</label>
+            <input type="text" class="form-control" id="name"placeholder="Enter Salary" formControlName="salary">
+        </div>
+        <div class="row justify-content-center">
+            <button type="submit" class="btn btn-primary center" (click)="submit()">Submit</button>
+        </div>
+    </form>
+</div>
