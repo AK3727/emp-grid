@@ -1,0 +1,41 @@
+<div class="formGroup" class="col-md-2 float-right">
+    <label>Search By Department Name</label>
+    <input type="text" placeholder="Enter Department Name" class="form-control" #departmentSearch/>
+</div>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Department</th>
+    <th scope="col" class="link" (click)="commonService.sortBySalary()" >Salary <i class="fa fa-sort primary" aria-hidden="true"></i></th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody *ngIf="commonService.employeeData$ | async as employeeData">
+        <ng-container *ngIf="employeeData.length; else noEmployee">
+            <tr *ngFor="let employee of employeeData; index as i">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>
+                {{ employee.name }}
+                </td>
+                <td>{{ employee.department }}</td>
+                <td>{{ employee.salary | number }}</td>
+                <td>
+                    <button type="button" class="noButton" (click)="editEmployee(employee.id)">
+                        <i class="fa fa-pencil success" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="noButton" (click)="commonService.removeEmployee(employee.id)">
+                        <i class="fa fa-remove danger" aria-hidden="true"></i>
+                    </button>        
+                </td>
+            </tr>
+        </ng-container>
+</tbody>
+<ng-template #noEmployee>
+    <tfoot>No Records Found</tfoot>    
+</ng-template>
+</table>
+<div class="row justify-content-center">
+    <button class="btn btn-primary center" (click)="addEmployee()"> Add</button>
+</div>

@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+.success {
+    color: green;
+}
+.danger {
+    color: red;
+}
+.noButton {
+    border: none;
+    background-color: transparent;
+}
+.link{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.btn-center {
+    width: 100px;
+    margin: auto;
+}
